@@ -55,13 +55,19 @@ function renderIng(e){
         
 
         const ingTag2 = document.createElement('li')
-        ingTag2.innerText = e.strIngredient2
+        const measTag2 = e.strMeasure2
+        const ing2 = e.strIngredient2
+        ingTag2.innerText = `${measTag2} ${ing2}`
 
         const ingTag3 = document.createElement('li')
-        ingTag3.innerText = e.strIngredient3
+        const measTag3 = e.strMeasure3
+        const ing3 = e.strIngredient3
+        ingTag3.innerText = `${measTag3} ${ing3}`
 
         const ingTag4 = document.createElement('li')
-        ingTag4.innerText = e.strIngredient4
+        const measTag4 = e.strMeasure4
+        const ing4 = e.strIngredient4
+        ingTag4.innerText = `${measTag4} ${ing4}`
 
         const ingTag5 = document.createElement('li')
         ingTag5.innerText = e.strIngredient5
