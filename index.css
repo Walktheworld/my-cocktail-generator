@@ -1,8 +1,8 @@
 body {
     background-blend-mode: lighten;
     background-color: rgb(150, 177, 149);
-    font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
   
 h1 {
@@ -16,19 +16,22 @@ h1 {
     border-style: hidden;
     margin-left: 200px;
     margin-right: 200px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 } 
 
-h2 {
+footer {
     text-align: center;
-    border-style: groove;
-    padding-left: 12px;
-    padding-top: 6px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
     
 }
 
+ul{
+    font-size: 17px;
+}
 p {
-    font-family:monospace;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 img {
@@ -40,8 +43,8 @@ img {
 #drink-container {
     display: grid;
     grid-auto-flow: column;
-    border-spacing: 10px;
-    border-style: groove;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 #howToBtn{
@@ -52,9 +55,11 @@ img {
 #cheersBtn{
     border-style: ridge;
     border-radius: 16px;
+    margin-top: 10px;
 }
 
 #ingredients{
     margin: 10px;
+
 }
 
