@@ -1,5 +1,7 @@
 const base_url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
 const pTag = document.createElement('p')
+const howToBtn = document.getElementById("howToBtn");
+const drinkContainer= document.getElementById('drink-container')
 
 function fetchURL(){
     fetch(base_url)
@@ -12,7 +14,6 @@ function fetchURL(){
 }
 
 function renderURL(drink) {
-    const drinkContainer= document.getElementById('drink-container')
     const ulTag = document.createElement('ul')
 
     const imgTag = document.createElement('img')
@@ -24,28 +25,13 @@ function renderURL(drink) {
     drinkContainer.appendChild(ulTag)
 }
 
-const howToBtn = document.getElementById("howToBtn");
-
-// const cheersBtn = document.createElement("button")
-// cheersBtn.innerHTML = "🍸 **clink** 🍸";
-// cheersBtn.type = "click";
-// cheersBtn.id = "cheersBtn";
-// document.body.appendChild(cheersBtn);
-
-// function cheersButton(){
-//     cheersBtn.addEventListener("click", ()=>{
-//         alert("🍻 CHEERS!!! 🥂 ");
-//     });
-// }
-
 function disableBtn(){
     document.getElementById("howToBtn").disabled = true;
 }
 
 function renderIng(e){
     howToBtn.addEventListener('click',function() {
-        
-        const drinkContainer= document.getElementById('drink-container')
+    
         const ulTag = document.createElement('ul')
     
         const ingTag1 = document.createElement('ul')
@@ -83,6 +69,7 @@ function renderIng(e){
         insTag.innerText = e.strInstructions
     
         ulTag.append(ingTag1, ingTag2, ingTag3, ingTag4, ingTag5, ingTag6, insTag)
+        ulTag.id = "ingredients"
         drinkContainer.appendChild(ulTag)
 
         const cheersBtn = document.createElement("button")
@@ -105,3 +92,25 @@ function renderIng(e){
 document.addEventListener("DOMContentLoaded", function(){
 fetchURL()
 })
+
+
+
+
+
+
+
+
+
+
+
+// const cheersBtn = document.createElement("button")
+// cheersBtn.innerHTML = "🍸 **clink** 🍸";
+// cheersBtn.type = "click";
+// cheersBtn.id = "cheersBtn";
+// document.body.appendChild(cheersBtn);
+
+// function cheersButton(){
+//     cheersBtn.addEventListener("click", ()=>{
+//         alert("🍻 CHEERS!!! 🥂 ");
+//     });
+// }

@@ -1,4 +1,5 @@
 body {
+    background-blend-mode: lighten;
     background-color: rgb(150, 177, 149);
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
@@ -51,5 +52,9 @@ img {
 #cheersBtn{
     border-style: ridge;
     border-radius: 16px;
+}
+
+#ingredients{
+    margin: 10px;
 }
 
