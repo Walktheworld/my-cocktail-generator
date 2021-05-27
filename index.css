@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(150, 177, 149);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+  
+h1 {
+    font-size: 60px;
+    color:whitesmoke;
+    text-align: center;
+    background-image: url('https://cdn.pixabay.com/photo/2020/02/18/15/41/buffalo-trace-4859798_1280.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 16px;
+    border-style: hidden;
+    margin-left: 200px;
+    margin-right: 200px;
+} 
+
+h2 {
+    text-align: center;
+    border-style: groove;
+    padding-left: 12px;
+    padding-top: 6px;
+    
+}
+
+p {
+    font-family:monospace;
+    font-size: 20px;
+}
+
+img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 16px;
+}
+li{
+    text-align: left;
+}
+#drink-container {
+    display: grid;
+    grid-auto-flow: column;
+    border-spacing: 10px;
+}
+
+#howToBtn{
+    border-style: ridge;
+    border-radius: 16px;
+}
+
+#cheersBtn{
+    border-style: ridge;
+    border-radius: 16px;
+}
+
+ul{
+    border-style: groove;
+    padding: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
