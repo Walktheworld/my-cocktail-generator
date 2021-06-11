@@ -34,6 +34,10 @@ p {
     font-size: 25px;
 }
 
+li{
+    list-style-type: none;
+}
+
 img {
     max-width: 30%;
     height: auto;
