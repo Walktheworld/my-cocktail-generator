@@ -1,7 +1,5 @@
-const base_url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
-const pTag = document.createElement('p')
-const howToBtn = document.getElementById("howToBtn");
-const drinkContainer= document.getElementById("drink-container")
+const base_url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
+
 
 
 function fetchURL(){
@@ -9,25 +7,31 @@ function fetchURL(){
     .then(res => res.json())
     .then (data=>{
         renderURL(data.drinks[0])
-        data.drinks.forEach(renderIng)
+        renderIng(data.drinks[0])
     })
 }
 
 function renderURL(drink) {
+    const drinkContainer= document.getElementById("drink-container")
     const divTag = document.createElement('div')
 
     const imgTag = document.createElement('img')
     imgTag.src = drink.strDrinkThumb
     
+    const pTag = document.createElement('p')
     pTag.innerText = drink.strDrink
     
     divTag.append(imgTag, pTag)
     drinkContainer.appendChild(divTag)
 }
-
+// seperate drinkcontainer
 function renderIng(drink){
-    howToBtn.addEventListener('click',function(e) {
-        e.target.disabled = true
+    const ingContainer= document.getElementById("ingredient-container")
+    const howToBtn = document.getElementById("howToBtn");
+    
+    howToBtn.addEventListener('click',(e) => {
+        ingContainer.innerHTML="";
+        // e.target.disabled = true
         const ulTag = document.createElement('ul')
     
         const ingTag1 = document.createElement('li')
@@ -66,7 +70,7 @@ function renderIng(drink){
     
         ulTag.append(ingTag1, ingTag2, ingTag3, ingTag4, ingTag5, ingTag6, insTag)
         ulTag.id = "ingredients"
-        drinkContainer.appendChild(ulTag)
+        ingContainer.appendChild(ulTag)
     });
     
 }
@@ -92,10 +96,10 @@ document.body.appendChild(refreshBtn);
 
 function refreshButton(){
     refreshBtn.addEventListener("click", ()=>{
-    
+        const ingContainer= document.getElementById("ingredient-container")
+        const drinkContainer= document.getElementById("drink-container")
         drinkContainer.innerHTML= "";
-
-        howToBtn.disabled= false;
+        ingContainer.innerHTML="";
 
         fetchURL();
     });      
@@ -105,6 +109,7 @@ refreshButton();
 
 document.addEventListener("DOMContentLoaded", function(){
 fetchURL();
+
 })
 
 
