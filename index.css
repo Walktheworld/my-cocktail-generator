@@ -61,9 +61,16 @@ img {
     border-radius: 16px;
     margin-top: 10px;
 }
+#refreshBtn{
+    border-style: ridge;
+    border-radius: 16px;
+    margin-top: 10px;
+
+}
 
 #ingredients{
     margin: 10px;
 
 }
+
 

@@ -12,7 +12,7 @@ function fetchURL(){
         data.drinks.forEach(renderIng)
     })
 }
-// filter through object
+
 function renderURL(drink) {
     const divTag = document.createElement('div')
 
@@ -24,15 +24,9 @@ function renderURL(drink) {
     divTag.append(imgTag, pTag)
     drinkContainer.appendChild(divTag)
 }
-// const newObj = {}
-// Object.keys(data.drinks[0]).forEach(key => {
-//     if(key.includes('Ingredient') && data.drinks[0][key] !== null) {
-//         newObj[key] = data.drinks[0][key]
-//     }
-// })
 
 
-// change to (li) and css the bullets
+
 function renderIng(drink){
     howToBtn.addEventListener('click',function(e) {
         e.target.disabled = true
@@ -75,32 +69,48 @@ function renderIng(drink){
         ulTag.append(ingTag1, ingTag2, ingTag3, ingTag4, ingTag5, ingTag6, insTag)
         ulTag.id = "ingredients"
         drinkContainer.appendChild(ulTag)
-
-        const cheersBtn = document.createElement("button")
-        cheersBtn.innerHTML = "🍸 **clink** 🍸";
-        cheersBtn.type = "click";
-        cheersBtn.id = "cheersBtn";
-        document.body.appendChild(cheersBtn);
-
-        function cheersButton(){
-            cheersBtn.addEventListener("click", ()=>{
-                alert("🍻 CHEERS!!! 🥂 ");
-            });
-        }
-        
-        cheersButton() 
     });
     
 }
 
+const cheersBtn = document.createElement("button")
+cheersBtn.innerHTML = "🍸 **clink** 🍸";
+cheersBtn.type = "click";
+cheersBtn.id = "cheersBtn";
+document.body.appendChild(cheersBtn);
+function cheersButton(){
+    cheersBtn.addEventListener("click", ()=>{
+        alert("🍻 CHEERS!!! 🥂 ");
+    });
+           
+}
+cheersButton()
+
+const refreshBtn = document.createElement("button")
+refreshBtn.innerHTML = "🍹 New Drink 🍹";
+refreshBtn.type = "click";
+refreshBtn.id = "refreshBtn";
+document.body.appendChild(refreshBtn);
+
+function refreshButton(){
+    refreshBtn.addEventListener("click", ()=>{
+    
+        drinkContainer.innerHTML= "";
+        
+        howToBtn.disabled= false;
+
+        fetchURL();
+    });  
+    
+}
+refreshButton();
+
+
 document.addEventListener("DOMContentLoaded", function(){
-fetchURL()
-// function addevent function disable to true
+fetchURL();
+
 })
 
-
-
-// add refresh button next to cheers then  clear html  and fetch
 
 
 
