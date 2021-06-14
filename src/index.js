@@ -1,7 +1,7 @@
 const base_url = `https://www.thecocktaildb.com/api/json/v1/1/random.php`
 const pTag = document.createElement('p')
 const howToBtn = document.getElementById("howToBtn");
-const drinkContainer= document.getElementById('drink-container')
+const drinkContainer= document.getElementById("drink-container")
 
 
 function fetchURL(){
@@ -24,8 +24,6 @@ function renderURL(drink) {
     divTag.append(imgTag, pTag)
     drinkContainer.appendChild(divTag)
 }
-
-
 
 function renderIng(drink){
     howToBtn.addEventListener('click',function(e) {
@@ -74,15 +72,15 @@ function renderIng(drink){
 }
 
 const cheersBtn = document.createElement("button")
-cheersBtn.innerHTML = "🍸 **clink** 🍸";
+cheersBtn.innerHTML = "🍸 **CLINK** 🍸";
 cheersBtn.type = "click";
 cheersBtn.id = "cheersBtn";
 document.body.appendChild(cheersBtn);
+
 function cheersButton(){
     cheersBtn.addEventListener("click", ()=>{
         alert("🍻 CHEERS!!! 🥂 ");
-    });
-           
+    });        
 }
 cheersButton()
 
@@ -96,19 +94,17 @@ function refreshButton(){
     refreshBtn.addEventListener("click", ()=>{
     
         drinkContainer.innerHTML= "";
-        
+
         howToBtn.disabled= false;
 
         fetchURL();
-    });  
-    
+    });      
 }
 refreshButton();
 
 
 document.addEventListener("DOMContentLoaded", function(){
 fetchURL();
-
 })
 
 
