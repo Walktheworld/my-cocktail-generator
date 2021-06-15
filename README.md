@@ -3,7 +3,15 @@ I want my user to recieve a random drink idea and them be able to feel ispired b
 ~~~~~~~FIX~~~~~~~~~
 - quantities not listed
 - remove bullets if undefined
+- add refresh button next to cheers then  clear html  and fetch
 
+
+// const newObj = {}
+// Object.keys(data.drinks[0]).forEach(key => {
+//     if(key.includes('Ingredient') && data.drinks[0][key] !== null) {
+//         newObj[key] = data.drinks[0][key]
+//     }
+// })
 
 
 
